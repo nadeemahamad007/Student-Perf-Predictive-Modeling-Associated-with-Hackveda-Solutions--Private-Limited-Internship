@@ -110,7 +110,35 @@ Open `notebooks/student_performance_modeling.ipynb` and run the cells in order.
 
 ## Dashboard Preview
 
-![Student Performance Dashboard Preview](assets/dashboard-preview (2).png)
+### Dashboard — Overview
+![Student Performance Dashboard Preview 2](assets/dashboard-preview%20%282%29.png)
+
+### Dashboard — View 3
+![Student Performance Dashboard Preview 3](assets/dashboard-preview%20%283%29.png)
+
+### Dashboard — View 4
+![Student Performance Dashboard Preview 4](assets/dashboard-preview%20%284%29.png)
+
+### Dashboard — View 5
+![Student Performance Dashboard Preview 5](assets/dashboard-preview%20%285%29.png)
+
+### Dashboard — View 6
+![Student Performance Dashboard Preview 6](assets/dashboard-preview%20%286%29.png)
+
+### Dashboard — View 7
+![Student Performance Dashboard Preview 7](assets/dashboard-preview%20%287%29.png)
+
+### Dashboard — View 8
+![Student Performance Dashboard Preview 8](assets/dashboard-preview%20%288%29.png)
+
+### Dashboard — View 9
+![Student Performance Dashboard Preview 9](assets/dashboard-preview%20%289%29.png)
+
+### Dashboard — View 10
+![Student Performance Dashboard Preview 10](assets/dashboard-preview%20%2810%29.png)
+
+### Dashboard — View 11
+![Student Performance Dashboard Preview 11](assets/dashboard-preview%20%2811%29.png)
 
 ## Important Limitations
 
