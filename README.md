@@ -1,33 +1,49 @@
-# 🎓 Student Performance — EDA & Predictive Modeling
+# Student Performance — Predictive Modeling
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Analysis-150458?style=flat-square&logo=pandas&logoColor=white)
-![Scikit--learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-Visualisation-3F4F75?style=flat-square&logo=plotly&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-An end-to-end data analysis and regression project exploring student assessment scores in mathematics, reading, and writing. It combines exploratory data analysis, baseline regression models, and an interactive Streamlit dashboard.
+An end-to-end student assessment analysis project exploring math, reading, and writing scores, comparing score patterns across selected student attributes, and evaluating baseline machine-learning models for estimating math scores.
 
-> **Scope note:** This is an educational portfolio demonstration. Group-level patterns are descriptive, not causal, and the model is not suitable for high-stakes decisions about students.
+The project includes a cleaned Jupyter Notebook, an interactive Streamlit dashboard, model comparison using a held-out test set, and an exploratory prediction form.
 
-## ✨ Features
+## Project Highlights
 
-- Data inspection, missing-value checks, duplicate checks, and descriptive summaries
-- Score distributions and assessment-score correlation analysis
+- Exploratory analysis of student assessment scores
+- Data-quality checks and descriptive statistics
+- Interactive score distributions and correlation heatmap
 - Group comparisons by test preparation, lunch type, and parental education
-- Three regression baselines: Linear Regression, Decision Tree, and Random Forest
-- Held-out evaluation using MAE, RMSE, and R²
-- Interactive dashboard filters, plots, sample prediction, and filtered-CSV export
-- Preprocessing encapsulated in a scikit-learn pipeline to reduce train/test leakage risk
+- Linear Regression, Decision Tree, and Random Forest regression baselines
+- Model evaluation using MAE, RMSE, and R²
+- Interactive Streamlit dashboard with filters and downloadable filtered data
+- Demonstration form for estimating a math score
+- Reproducible preprocessing and modeling pipelines
 
-## 📊 Dashboard preview
+## Dataset
 
-![Student Performance dashboard](assets/dashboard-preview.png)
+The project uses `data/StudentsPerformance.csv`, containing **1,000 records and 8 columns**:
 
-## 🗂️ Repository structure
+- Categorical attributes: Gender, Race/Ethnicity, Parental Level Of Education, Lunch, and Test Preparation Course
+- Assessment scores: Math Score, Reading Score, and Writing Score
+
+## Tech Stack
+
+- Python
+- Pandas and NumPy
+- Scikit-learn
+- Matplotlib and Seaborn
+- Plotly
+- Streamlit
+- Jupyter Notebook
+
+## Project Structure
 
 ```text
-student-performance-portfolio/
+Student-Performance-Predictive-Modeling/
 ├── app.py
 ├── data/
 │   ├── StudentsPerformance.csv
@@ -38,63 +54,84 @@ student-performance-portfolio/
 │   └── dashboard-preview.png
 ├── requirements.txt
 ├── .gitignore
-├── LINKEDIN_POST.md
 └── README.md
 ```
 
-## 🚀 Run locally
-
-Python 3.10 or newer is recommended. From the project root:
+## Installation
 
 ```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
 python -m venv .venv
 ```
 
 Activate the environment, then install dependencies:
 
-**Windows**
-```powershell
-.venv\Scripts\Activate.ps1
+**Windows (Git Bash):**
+```bash
+source .venv/Scripts/activate
 pip install -r requirements.txt
-streamlit run app.py
 ```
 
-**macOS / Linux**
+**macOS/Linux:**
 ```bash
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Run the Dashboard
+
+```bash
 streamlit run app.py
 ```
 
-Open the local URL printed by Streamlit. To explore the notebook, run `jupyter notebook` from the project root and open `notebooks/student_performance_modeling.ipynb`.
+The dashboard includes interactive filters, score distributions, score correlations, group comparisons, model evaluation metrics, a sample prediction form, and CSV export for the filtered records.
 
-## 🧪 Modeling approach
+## Run the Notebook
 
-1. Validate the expected dataset columns and inspect data quality.
-2. Explore distributions, correlations, and selected group summaries.
-3. Set **Math Score** as the regression target.
-4. Impute and one-hot encode categorical predictors; impute and scale numeric predictors.
-5. Use a fixed 80/20 train-test split (`random_state=42`).
-6. Compare Linear Regression, Decision Tree, and Random Forest using MAE, RMSE, and R².
+Start Jupyter from the repository root:
 
-The dashboard displays metrics calculated from the included dataset and fixed split; results may vary if the data or modeling choices change.
+```bash
+jupyter notebook
+```
 
-## ⚠️ Limitations and responsible use
+Open `notebooks/student_performance_modeling.ipynb` and run the cells in order.
 
-- The dataset has 1,000 records and may not represent other schools, regions, or student populations.
-- Reading and writing scores are predictors. They must be available at the intended prediction time; otherwise, the prediction setup would not be valid for that use case.
-- A single hold-out split is not evidence of performance on new populations. Cross-validation and external validation would be needed for stronger claims.
-- Differences across demographic groups do not establish causation.
-- Do not use this demo for admissions, placement, discipline, or decisions affecting educational opportunity.
+## Model Workflow
 
-## 🔭 Possible next steps
+1. Load and validate the dataset
+2. Review missing values, duplicates, and descriptive statistics
+3. Explore score distributions and relationships
+4. Encode categorical fields using a preprocessing pipeline
+5. Split the data into training and test sets
+6. Train Linear Regression, Decision Tree, and Random Forest regressors
+7. Compare models using MAE, RMSE, and R²
+8. Explore predictions in the dashboard
+
+## Dashboard Preview
+
+![Student Performance Dashboard Preview](assets/dashboard-preview.png)
+
+## Important Limitations
+
+- This is an educational portfolio project, not a validated student assessment system.
+- Reading and writing scores are model inputs. They should only be used when available at the time the math score is being estimated.
+- Associations between group attributes and scores are descriptive and do not establish causation.
+- The dataset is limited in size; a single train-test split does not establish generalization to other populations.
+- Do not use this demonstration to make admissions, placement, disciplinary, or other high-stakes decisions about students.
+
+## Future Improvements
 
 - Add cross-validation and hyperparameter tuning
-- Review residuals and calibration of prediction errors
-- Compare models with and without reading/writing scores
-- Add a model card and document dataset provenance
+- Include residual analysis and prediction intervals
+- Compare alternative feature sets, including a model without reading and writing scores
+- Add a model card describing intended use and limitations
 - Deploy the dashboard to Streamlit Community Cloud
 
 ## Author
 
 **Nadeem Ahamad**
+
+
+Data Science Internship Project associated with **Hackveda Solutions Private Limited Internship**, focused on student performance analysis, predictive modeling, model evaluation, and interactive visualization using Python and Scikit-learn.
+
