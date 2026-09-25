@@ -110,7 +110,7 @@ Open `notebooks/student_performance_modeling.ipynb` and run the cells in order.
 
 ## Dashboard Preview
 
-![Student Performance Dashboard Preview](assets/dashboard-preview.png)
+![Student Performance Dashboard Preview](assets/dashboard-preview (2).png)
 
 ## Important Limitations
 
